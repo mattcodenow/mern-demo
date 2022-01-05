@@ -93,3 +93,44 @@ In the scripts block in package.json, add the following content:
   },
 ```
 
+## Run Dev Script
+From the terminal:
+```
+npm run dev
+```
+The application should start using `nodemon`, you will see the output from dev.ts a few lines down.  
+Try saving the dev.ts file with CTRL + S and you will see the file restarts on change.  
+To stop the script from running, CTRL + C.  Sometimes quitting the script will not work, in this case start a new terminal and delete the terminal running the script.
+
+## Run Build Script
+From the terminal:
+```
+npm run build
+```
+The built JavaScript should appear in the `/dist` directory.
+
+## Add Build Destination Directory To GitIgnore
+Inside the .gitignore file add the following:
+```
+node_modules
+notes
+dist
+
+```
+This will ignore the built JS when pushing to Github.
+
+## Make Notes Directory
+Make a directory to hold notes, ignored from pushing to Github.
+```
+mkdir notes
+```
+
+## Install Express
+```
+npm i express
+```
+
+## Install Express Types As Dev Dependency
+```
+npm i -D @types/express
+```
